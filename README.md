@@ -27,7 +27,8 @@ Dieser Python-Code ist im Rahmen eines Reinforcement Learning-Projektes entstand
 
 Ziel des Übung ist die Maximierung der Stromproduktion, respektive des Ertrags aus ebendieser. Die Environment kann mit dem Befehl `python play.py` gestartet werden:
 
-![Screenshot der Environment im Spielbetrieb](/img/letsplay.jpg)
+![<img src="/img/letsplay.jpg" width="20"/>](/img/letsplay.jpg)
+
 
 ### Spielmodus
 
