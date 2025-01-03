@@ -1,2 +1,2 @@
 # agenticLWK
-RL Projekt Regelung eines Laufwasserkraftwerkes, Inspiriert vom Kleinwasserkraftwerk Löss
+Agentische Regelung eines Laufwasserkraftwerkes. Nachfolgender Code ist im Rahmen eines kleinen Reinforcment Projektes entstanden.
