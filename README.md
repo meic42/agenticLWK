@@ -29,8 +29,7 @@ Ziel der Umgebung ist die Maximierung der Stromproduktion durch optimale Steueru
 
 ![<img src="/img/letsplay.jpg" width="20"/>](/img/letsplay.jpg)
 
-
-### Mapping der Aktoren auf Tastatur
+Die Aktoren können mittels Tastatur betätigt werden.
 
 | Taste  | Aktion                     |
 |--------|----------------------------|
@@ -50,14 +49,14 @@ Der Durchfluss durch die Turbinen 1-4 kann individuell durch die Stellung der Le
 Um im Betrieb mehr Flexibilität zu haben, können die beiden Kraftwerkstufen umfahren werden. Parallel zu den Turbinen 1 und 2 kann über einen By-Pass (Index 5) Wasser aus dem Stauwehr OT direkt in den Kanal NT geleitet werden. Über einen weiteren By-Pass (Index 6) kann Wasser aus dem Kanal NT unter Umgehung der Turbinen 3 und 4 direkt zurück in die Töss geleitet werden.
 Der Durchfluss durch die By-Pässe kann durch deren Schieberstellung (Öffnung 0...100%) eingestellt werden.
 
-
-
 ### Spielregeln
 
+Die Wasserentnahme aus den Reservoirs erfolgt 10cm unter der Wehrkante. Wird einem Reservoir zu viel Wasser entnommen, respektive führt die Töss wenig Wasser, sinkt der Pegel im Reservoir. Läuft eine Turbine trocken, wird ihr Leitwerk geschlossen und für eine Fehlerzeit (FT) von 2min gesperrt. Während dieser Zeit kann kein Strom produziert werden.
 
+Ein Überlaufen des Stauwehrs Obertöss bleibt folgenlos; der Überfall wird in das Flussbett der Töss geleitet.
+Eine kontrollierte Entlastung des Kanals Niedertöss wird durch Streichwehr gewährt. Da sich dieses im Wohngebiet befindet, beschweren sich Anwohner über das Rauschen. Diese Situation führt in der Environment zu einer Strafzahlung, welche vom Stromerlös abgezogen wird.
 
-
-
+## Hydrodata der Messstelle Töss-Wülflingen
 <!-- Das betrachtete System besteht aus einer Kaskade von zwei Kraftwerksstufen. Beim Hauptwehr in Obertöss werden bis zu 5m$^3/s$ Wasser entnommen und über eine Fallhöhe von rund 5.5m in zwei parallel angeordneten Kaplan-Turbinen verstromt. Anschliessend wird das Wasser im alten Rieter-Kanal, welcher neben der Töss verläuft, bis zur zweiten Stufe in Niedertöss geleitet und mit weiteren 5m Fallhöhe in zwei Francis-Turbinen verstromt. -->
 
 ## Reinforcement Learning
