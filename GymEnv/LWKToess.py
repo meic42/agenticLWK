@@ -76,6 +76,7 @@ class LWKToess(gym.Env):
         self.A6_max = 0.70      # m2
         self.alpha_speed = 10   # % pro Sekunde
         self.Q_Rest = 0.5       # m3/s
+        self.FT_par = 120       # s
 
         # Deklaration der Lösungsvariablen
         self.h_OT = None        # m
@@ -167,10 +168,10 @@ class LWKToess(gym.Env):
         if (Q1 + Q2 + Q5) > Q125_max:
             if self.alpha_1 > 0:
                 self.alpha_1, Q1 = 0, 0 # Störung
-                self.FT1 = 60
+                self.FT1 = self.FT_par
             if self.alpha_2 > 0:
                 self.alpha_2, Q2 = 0, 0 # Störung
-                self.FT2 = 60
+                self.FT2 = self.FT_par
             Q5 = min(Q5, Q125_max) # Q5 begrenzt, so dass h_OT >= 0 bleibt
 
         # Wasserstandsaktualisierung
@@ -196,10 +197,10 @@ class LWKToess(gym.Env):
         if (Q3 + Q4 + Q6) > Q346_max:
             if self.alpha_3 > 0:
                 self.alpha_3, Q3 = 0, 0 # Störung
-                self.FT3 = 60
+                self.FT3 = self.FT_par
             if self.alpha_4 > 0:
                 self.alpha_4, Q4 = 0, 0 # Störung
-                self.FT3 = 60
+                self.FT3 = self.FT_par
             Q6 = min(Q6, Q346_max) # Q6 begrenzt, so dass h_NT >= 0 bleibt
 
         # Wasserstandsaktualisierung
