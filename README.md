@@ -56,9 +56,6 @@ Die Wasserentnahme aus den Reservoirs erfolgt 10cm unter der Wehrkante. Wird ein
 Ein Überlaufen des Stauwehrs Obertöss bleibt folgenlos; der Überfall wird in das Flussbett der Töss geleitet.
 Eine kontrollierte Entlastung des Kanals Niedertöss wird durch Streichwehr gewährt. Da sich dieses im Wohngebiet befindet, beschweren sich Anwohner über das Rauschen. Diese Situation führt in der Environment zu einer Strafzahlung, welche vom Stromerlös abgezogen wird.
 
-## Hydrodata der Messstelle Töss-Wülflingen
-<!-- Das betrachtete System besteht aus einer Kaskade von zwei Kraftwerksstufen. Beim Hauptwehr in Obertöss werden bis zu 5m$^3/s$ Wasser entnommen und über eine Fallhöhe von rund 5.5m in zwei parallel angeordneten Kaplan-Turbinen verstromt. Anschliessend wird das Wasser im alten Rieter-Kanal, welcher neben der Töss verläuft, bis zur zweiten Stufe in Niedertöss geleitet und mit weiteren 5m Fallhöhe in zwei Francis-Turbinen verstromt. -->
-
 ## Reinforcement Learning
 
-
+Die Env kann mit einem RL-Agenten aus dem [Stable Baselines3 Zoo](https://github.com/DLR-RM/stable-baselines3) trainiert werden. Ein Beispiel ist in den Dateien `train_PPO.py` und `test_PPO.py` enthalten.
