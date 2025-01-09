@@ -3,11 +3,62 @@ import numpy as np
 import pygame
 from pygame.locals import *
 
-
 class LWKToess(gym.Env):
-    """ 
-
     """
+Custom Gym-Umgebung zur Simulation eines Laufwasserkraftwerks.
+
+Diese Umgebung modelliert den Betrieb eines Laufwasserkraftwerks mit zwei Kraftwerkstufen, 
+Obertöss (OT) und Niedertöss (NT), und ihren jeweiligen Reservoirs. 
+Der Agent steuert Turbinen und Bypässe, um die Stromproduktion zu maximieren, 
+die Wasserstände in den Reservoirs zu regulieren und Strafen für Überläufe zu minimieren.
+
+Komponenten:
+- Turbine 1 (Obertöss): 170 kW
+- Turbine 2 (Obertöss): 100 kW
+- Turbine 3 (Niedertöss): 150 kW
+- Turbine 4 (Niedertöss): 90 kW
+- Bypass 5 (Obertöss)
+- Bypass 6 (Niedertöss)
+
+Observation Space (Beobachtungsraum):
+Der Beobachtungsraum ist ein Vektor mit 15 Werten:
+1. Wasserstände: h_OT, h_NT
+2. Elektrische Leistung: Pel1, Pel2, Pel34
+3. Leitwerkstellungen: alpha_1 bis alpha_4
+4. Schieberstellungen: alpha_5, alpha_6
+5. Fehlerzeiten: FT1 bis FT4
+
+Wertebereiche:
+- Wasserstände: 0 bis 10 m
+- Elektrische Leistung: 0 bis 200 kW
+- Leitwerk- und Schieberstellungen: 0 bis 100 %
+- Fehlerzeiten: 0 bis 200 Sekunden
+
+Action Space (Aktionsraum):
+Diskreter Aktionsraum mit 13 möglichen Aktionen:
+1 bis 12: Erhöhung oder Verringerung der Leitwerk- und Schieberstellungen.
+0: Keine Aktion.
+
+Belohnungsstruktur:
+- Positive Belohnung für erzeugte Energie (in CHF pro kWh).
+- Negative Belohnung für Überläufe in Niedertöss.
+- Die kumulierte Belohnung wird im 'info'-Wert zurückgegeben.
+
+Rendering:
+- Unterstützte Modi: 'rgb_array'.
+- Visualisierung der Wasserstände und Leitwerkstellungen in Echtzeit.
+
+Parameter:
+- render_mode (str): Rendermodus ('rgb_array' oder None).
+- sim_time (int): Gesamte Simulationszeit in Sekunden.
+
+Beispielverwendung:
+    env = LWKToess(render_mode=None, sim_time=600)
+    obs, info = env.reset()
+    action = env.action_space.sample()
+    obs, reward, terminated, truncated, info = env.step(action)
+"""
+
     metadata = {"render_modes": ["rgb_array"], "render_fps": 30}
 
     def __init__(self, render_mode=None, sim_time=600):
