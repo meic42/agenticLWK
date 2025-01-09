@@ -6,27 +6,7 @@ from pygame.locals import *
 
 class LWKToess(gym.Env):
     """ 
-    ## Laufwasserkraftwerk Toess
-    Gymnasium Environment zum Trainieren von RL-Agenten.
-    
-    ## Hydraulisches Modell
 
-    ## Beschreibung der Komponenten
-    T1: Turbine 1 in Obertöss, 170kW
-    T2: Turbine 2 in Obertöss, 100kW
-    T3: Turbine 3 in Niedertöss, 150kW
-    T4: Turbine 4 in Niedertöss, 90kW
-    BP5: By-Pass in Obertöss
-    BP6: By-Pass in Niedertöss
-
-    Die Komponenten in Obertöss operieren augrund dem Niveau h_OT, 
-    die Komponenten in Niedertöss zwischen dem Niveau h_NT.
-
-    Lösungsvariablen 
-    h_OT
-    h_K1
-    h_K2
-    h_NT
     """
     metadata = {"render_modes": ["rgb_array"], "render_fps": 30}
 
