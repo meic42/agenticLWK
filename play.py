@@ -1,5 +1,5 @@
 from gymnasium.utils.play import play
-from GymEnv.LWKToess import LWKToess
+from lwktoess import LWKToess
 
 env = LWKToess(render_mode='rgb_array', sim_time=600)
 
