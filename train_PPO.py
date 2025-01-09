@@ -1,7 +1,7 @@
 from stable_baselines3 import PPO
 from stable_baselines3.common.callbacks import BaseCallback, EvalCallback
 from stable_baselines3.common.env_util import make_vec_env
-from GymEnv.LWKToess import LWKToess
+from lwktoess import LWKToess
 
 # 1. RewardLoggerCallback für kumulierten Reward zu TensorBoard
 class RewardLoggerCallback(BaseCallback):

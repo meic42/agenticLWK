@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from stable_baselines3 import PPO
-from GymEnv.LWKToess import LWKToess
+from lwktoess import LWKToess
 
 # Parameter
 MODEL_PATH = "./worst_model/worst_model.zip"  # Pfad zum trainierten Modell
