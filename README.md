@@ -56,6 +56,10 @@ Die Wasserentnahme aus den Reservoirs erfolgt 10cm unter der Wehrkante. Wird ein
 Ein Überlaufen des Stauwehrs Obertöss bleibt folgenlos; der Überfall wird in das Flussbett der Töss geleitet.
 Eine kontrollierte Entlastung des Kanals Niedertöss wird durch Streichwehr gewährt. Da sich dieses im Wohngebiet befindet, beschweren sich Anwohner über das Rauschen. Diese Situation führt in der Environment zu einer Strafzahlung, welche vom Stromerlös abgezogen wird.
 
+## Hydrodata
+
+Beschreibung folgt
+
 ## Reinforcement Learning
 
 Die Env kann mit einem RL-Agenten aus dem [Stable Baselines3 Zoo](https://github.com/DLR-RM/stable-baselines3) trainiert werden. Ein Beispiel ist in den Dateien `train_PPO.py` und `test_PPO.py` enthalten.
